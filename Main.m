@@ -201,3 +201,6 @@ Names = { 'F0';'F1';'F2';'Ftotal';'F3D';'LVDT'};
 
 table(Names,RHS_RMSE,LHS_RMSE)
 
+
+%% ANSYS:
+
