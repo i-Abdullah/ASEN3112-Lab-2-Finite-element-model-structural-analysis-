@@ -149,16 +149,16 @@ grid minor
 figure(5)
 
 
-plot(F3D_av,'-ok','MarkerSize',7,'MarkerEdgeColor','blue',...
+plot(F3D_av-min(F3D_av),'-ok','MarkerSize',7,'MarkerEdgeColor','blue',...
     'MarkerFaceColor',[ 0 0.5 1 ],'LineWidth',1.5)
 
 hold on
-[ rmse_left_F3D ] = fit_and_plot(x_values,F3D_av,6,2);
-[ rmse_right_F3D ] = fit_and_plot(x_values,F3D_av,6,1);
+[ rmse_left_F3D ] = fit_and_plot(x_values,F3D_av-min(F3D_av),6,2);
+[ rmse_right_F3D ] = fit_and_plot(x_values,F3D_av--min(F3D_av),6,1);
 
 hold off
 legend('Experimental data','Left side fit','right side fit')
-ylim([min(F3D_av)-0.2 max(F3D_av)+30])
+ylim([min(F3D_av-min(F3D_av))-0.2 max(F3D_av-min(F3D_av))+30])
 
 title('Internal forces load cell');
 xlabel('Loading case')
@@ -201,6 +201,4 @@ Names = { 'F0';'F1';'F2';'Ftotal';'F3D';'LVDT'};
 
 table(Names,RHS_RMSE,LHS_RMSE)
 
-
-%% ANSYS:
 
