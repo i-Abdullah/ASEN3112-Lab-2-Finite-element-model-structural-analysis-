@@ -10,9 +10,9 @@ close all
 %% ANSYS:
 
 % assuming linear elastic behavior:
-type_support = 'left side is fixed and right is roller'; % Waht support type used for ANSYS
+type_support = 'both fixed'; % Waht support type used for ANSYS
 addpath('./ANSYS Results/'); % add ansys files to path,
-addpath('./ANSYS Results/LefBound_RightRoller'); % add ansys files to path,
+addpath('./ANSYS Results/Both Fixed'); % add ansys files to path,
 
 %% internal force in bars:
 
